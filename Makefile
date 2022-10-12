@@ -1,9 +1,13 @@
-all: expr3
+all: expr3_1
 
-expr3.tab.c expr3.tab.h: expr3.y
-	bison -d expr3.y
-expr3: expr3.tab.c expr3.tab.h
-	g++ expr3.tab.c -o expr3
+expr3: expr3.y
+	bison expr3.y -o expr3.cc
+	g++ -std=c++14 expr3.cc -o expr3
+
+expr3_1.tab.c expr3_1.tab.h: expr3_1.y
+	bison -d expr3_1.y
+expr3_1: expr3_1.tab.c expr3_1.tab.h
+	gcc expr3_1.tab.c -o expr3_1
 
 expr2.tab.c expr2.tab.h: expr2.y
 	bison -d expr2.y
