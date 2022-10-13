@@ -31,6 +31,7 @@ int inTable(char* str){
     if(tableCount<MAXsynbol_num){
         strcpy(symbol_table[tableCount].name,str);
         tableCount++;
+        symbol_table[tableCount].val=0;
         return tableCount-1;
     }
     else{
@@ -119,7 +120,8 @@ int yylex()
         }
         idStr[ ti ] = '\0';
         //printf("%s\n",idStr);
-        yylval.name = idStr;
+        yylval.name = (char*)malloc(sizeof(char)*50);
+        strcpy(yylval.name,idStr);
         ungetc(t, stdin);
         return ID;
     }
