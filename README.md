@@ -11,28 +11,28 @@
 ```
 ./
 include/
-	Ast.h					抽象语法树相关类
+	Ast.h				抽象语法树相关类
 	SymbolTable.h			符号表相关类
-	Type.h					类型系统相关类
-	IRBuilder.h				中间代码构造辅助类
-	Unit.h					编译单元
-	Function.h				函数
+	Type.h				类型系统相关类
+	IRBuilder.h			中间代码构造辅助类
+	Unit.h				编译单元
+	Function.h			函数
 	BasicBlock.h			基本块
 	Instruction.h			指令
-	Operand.h				指令操作数
+	Operand.h			指令操作数
 	AsmBuilder.h			汇编代码构造辅助类
-    MachineCode.h			汇编代码构造相关类
+    	MachineCode.h			汇编代码构造相关类
 	LinearScan.h			线性扫描寄存器分配相关类
-	LiveVariableAnalysis.h	活跃变量分析相关类
+	LiveVariableAnalysis.h		活跃变量分析相关类
 src/
 	Ast.cpp
 	BasicBlock.cpp
 	Function.cpp
 	Instruction.cpp
-	lexer.l					词法分析器
+	lexer.l				词法分析器
 	main.cpp
 	Operand.cpp
-	parser.y				语法分析器
+	parser.y			语法分析器
 	SymbolTable.cpp
 	Type.cpp
 	Unit.cpp
@@ -40,7 +40,7 @@ src/
 	LinearScan.cpp
 	LiveVariableAnalysis.cpp
 	sysyruntimelibrary
-test/						测试样例
+test/					测试样例
 sysyruntimelibrary/	 		SysY 运行时库
 .gitignore
 example.sy
