@@ -1,0 +1,8 @@
+int k;
+const int n = 10;
+int main () {
+	int i = 0;
+	k = 1;
+
+	return k;
+}
